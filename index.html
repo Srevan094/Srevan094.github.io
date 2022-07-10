@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pages/index.css">
+  <title>Mesto</title>
+</head>
+<body class="page">
+  <div class="popup" id="bigPicture">
+    <div class="popup__image-container">
+      <img src="images/karajaevsk.jpg" alt="увеличенная картинка" class="popup__image">
+      <p class="popup__footer-text">Аркхыз</p>
+      <button class="popup__krest" type="reset"></button>
+    </div>
+  </div>
+  <div class="popup page__popup" id="cardPopup">
+    <div class="popup__container">
+      <h2 class="popup__header">Новое место</h2>
+      <form class="popup__form" name="popup">
+        <input type="text" class="popup__field" id="placeName" name="placeName" placeholder="Название">
+        <input type="text" class="popup__field" id="imagePath" name="imagePath" placeholder="Ссылка на картинку">
+        <button class="popup__button" type="submit">Создать</button>
+      </form>
+      <button class="popup__krest" type="reset"></button>
+    </div>
+  </div>
+  <div class="popup page__popup" id="popupProfile">
+    <div class="popup__container">
+      <h2 class="popup__header">Редактировать профиль</h2>
+      <form class="popup__form" name="popup">
+        <input type="text" class="popup__field" id="nameInput" name="nameInput">
+        <input type="text" class="popup__field" id="jobInput" name="jobInput">
+        <button class="popup__button" type="submit">Сохранить</button>
+      </form>
+      <button class="popup__krest" type="reset"></button>
+    </div>
+  </div>
+  <header class="header page__header">
+    <img src="images/mesto-logo.svg" alt="логотип место" class="header__logo">
+  </header>
+  <main class="content page__content">
+    <section class="profile content__profile">
+      <div class="profile__left-items">
+        <img src="images/jak-if-custo.png" alt="жак-ив кусто" class="profile__avatar">
+        <div class="profile__info">
+          <div class="profile__name-edit">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="profile__edit-button" type="button"></button>
+          </div>
+          <p class="profile__profession">Исследователь океана</p>
+        </div>
+      </div>
+      <button class="profile__add-button" type="button"></button>
+    </section>
+    <section class="elements content__elements">
+    </section>
+  </main>
+  <footer class="footer page__footer">
+    <p class="footer__text">© 2020 Mesto Russia</p>
+  </footer>
+
+  <template id="public">
+    <article class="element">
+      <button class="element__delete" type="button"></button>
+      <img class="element__photo">
+      <div class="element__footer">
+        <h2 class="element__title"></h2>
+        <button class="element__like" type="button"></button>
+      </div>
+    </article>
+  </template>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
